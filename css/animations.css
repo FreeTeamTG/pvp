@@ -1,0 +1,169 @@
+/* ===================================
+   KEYFRAME ANIMATIONS
+   =================================== */
+
+/* Glitch Effect */
+.glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    animation: glitch-1 2.5s infinite;
+    color: var(--accent-cyan);
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 2.5s infinite;
+    color: var(--accent-magenta);
+    z-index: -2;
+}
+
+body.quiet-mode .glitch::before,
+body.quiet-mode .glitch::after {
+    animation: none;
+}
+
+@keyframes glitch-1 {
+    0%, 100% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+    }
+    40% {
+        transform: translate(-2px, -2px);
+        opacity: 0;
+    }
+    60% {
+        transform: translate(2px, 2px);
+        opacity: 0.8;
+    }
+    80% {
+        transform: translate(2px, -2px);
+        opacity: 0;
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 100% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translate(2px, -2px);
+        opacity: 0.6;
+    }
+    30% {
+        transform: translate(-2px, 2px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(2px, 2px);
+        opacity: 0.6;
+    }
+    70% {
+        transform: translate(-2px, -2px);
+        opacity: 0;
+    }
+}
+
+/* Scroll Pulse */
+@keyframes scroll-pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+/* Pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+/* Terminal Fade In */
+@keyframes terminal-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Up (for Intersection Observer) */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+}
+
+.fade-in-up.visible {
+    animation: fade-in-up 0.8s var(--anim-smooth) forwards;
+}
+
+/* Stagger animation for children */
+.stagger-children > * {
+    opacity: 0;
+}
+
+.stagger-children.visible > *:nth-child(1) { animation: fade-in-up 0.6s 0.1s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(2) { animation: fade-in-up 0.6s 0.2s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(3) { animation: fade-in-up 0.6s 0.3s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(4) { animation: fade-in-up 0.6s 0.4s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(5) { animation: fade-in-up 0.6s 0.5s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(6) { animation: fade-in-up 0.6s 0.6s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(7) { animation: fade-in-up 0.6s 0.7s var(--anim-smooth) forwards; }
+.stagger-children.visible > *:nth-child(8) { animation: fade-in-up 0.6s 0.8s var(--anim-smooth) forwards; }
+
+/* Quiet Mode: disable heavy animations */
+body.quiet-mode .glitch::before,
+body.quiet-mode .glitch::after,
+body.quiet-mode .scroll-indicator__line {
+    animation-duration: 4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @keyframes glitch-1,
+    @keyframes glitch-2,
+    @keyframes scroll-pulse,
+    @keyframes pulse {
+        0%, 100% { transform: none; opacity: 1; }
+    }
+}
