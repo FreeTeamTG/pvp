@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1ef0ff"/>
+      <stop offset="0.55" stop-color="#9bff3c"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="108" height="108" rx="22" fill="#06080d" stroke="url(#g)" stroke-width="6"/>
+  <text x="64" y="78" text-anchor="middle" font-family="Orbitron, system-ui, sans-serif" font-size="44" fill="#e9eef8">PvP</text>
+</svg>

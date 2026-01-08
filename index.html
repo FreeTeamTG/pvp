@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>PvP (@eoaiv) — биография, проекты и Free Team</title>
+  <meta name="description" content="PvP (@eoaiv) — со-овнер и кодер Free Team. 4 года опыта в кодинге и создании сайтов. Impossible Gallery: невозможные геометрические фигуры в кибер-арт стиле. Вступай в тиму." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="PvP (@eoaiv) — Free Team + Impossible Gallery" />
+  <meta property="og:description" content="Биография, опыт 4 года, проекты и рекламный блок Free Team. Максималистичный кибер-арт с галереей impossible objects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og.svg" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PvP (@eoaiv) — Free Team + Impossible Gallery" />
+  <meta name="twitter:description" content="Биография, опыт, проекты и Free Team. Impossible objects в монохроме." />
+  <meta name="twitter:image" content="assets/img/og.svg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts (optional, falls back to system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body data-theme="neon">
+  <a class="skip" href="#main">Пропустить к контенту</a>
+
+  <!-- One global canvas for cyber background FX -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand__mark" aria-hidden="true">PvP</span>
+        <span class="brand__sub">impossible / cyber</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a class="nav__link" href="#about">Обо мне</a>
+        <a class="nav__link" href="#gallery">Impossible Gallery</a>
+        <a class="nav__link" href="#projects">Проекты</a>
+        <a class="nav__link" href="#free-team">Free Team</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="chip" id="quietToggle" type="button" aria-pressed="false" aria-label="Quiet Mode">
+          Quiet: OFF
+        </button>
+        <button class="chip" id="themeToggle" type="button" aria-pressed="true" aria-label="Тема neon/dark">
+          Theme: NEON
+        </button>
+        <a class="chip chip--cta" href="https://t.me/+dyh5UV7beHQ5M2Qy" target="_blank" rel="noopener noreferrer">
+          Вступить в тиму
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="main" role="main">
+    <section id="top" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker">
+            <span class="kicker__dot" aria-hidden="true"></span>
+            Биография / портфолио / Free Team
+          </p>
+
+          <h1 class="title">
+            <span class="title__big">PvP</span>
+            <span class="title__sub">@eoaiv</span>
+          </h1>
+
+          <div class="hero__roles" aria-label="Роли">
+            <span class="tag">со‑овнер Free Team</span>
+            <span class="tag">кодер Free Team</span>
+            <span class="tag">4 года в кодинге и сайтах</span>
+          </div>
+
+          <p class="lead">
+            Делаю сайты, UI и штуки, которые выглядят как «слишком красиво, чтобы быть честным» —
+            но при этом быстро грузятся и не разваливаются на слабых устройствах.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#about">Обо мне</a>
+            <a class="btn btn--ghost" href="#free-team">Free Team</a>
+            <a class="btn btn--accent" href="https://t.me/+dyh5UV7beHQ5M2Qy" target="_blank" rel="noopener noreferrer">
+              Вступай в тиму
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__label">Фокус</div>
+              <div class="metaCard__value">Web / фронт / боты / UI</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__label">Режим</div>
+              <div class="metaCard__value"><span class="mono">max cyber</span> / mono shapes</div>
+            </div>
+          </div>
+
+          <p class="fineprint">
+            Визуальный мотив: невозможные фигуры (impossible objects). Анимация — ограниченная,
+            чтобы иллюзия не ломалась при повороте.
+          </p>
+        </div>
+
+        <div class="hero__panel" aria-label="Превью Impossible Gallery">
+          <div class="panelHeader">
+            <div class="panelHeader__left">
+              <div class="panelTitle">Impossible Preview</div>
+              <div class="panelSub">slow drift • axis shift • mouse parallax</div>
+            </div>
+            <div class="panelHeader__right">
+              <a class="link" href="#gallery">Открыть галерею →</a>
+            </div>
+          </div>
+
+          <div class="previewGrid">
+            <!-- 4 preview cards -->
+            <article class="impossibleCard" data-figure="penrose" aria-label="Penrose triangle">
+              <div class="impossibleCard__frame">
+                <div class="figureStack" aria-hidden="true">
+                  <!-- Pose A -->
+                  <svg class="figure pose poseA" viewBox="0 0 200 200" role="img" aria-label="Penrose triangle">
+                    <defs>
+                      <linearGradient id="penA-gL" x1="40" y1="40" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#f6f7fb"/>
+                        <stop offset="1" stop-color="#dfe4ee"/>
+                      </linearGradient>
+                      <linearGradient id="penA-gM" x1="30" y1="180" x2="180" y2="20" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#d6dbe6"/>
+                        <stop offset="1" stop-color="#bcc4d3"/>
+                      </linearGradient>
+                      <linearGradient id="penA-gD" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#c2cad8"/>
+                        <stop offset="1" stop-color="#aab3c6"/>
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Segment order crafts the “impossible” overlap feel -->
+                    <!-- Top segment -->
+                    <polygon class="face light" fill="url(#penA-gL)" points="62,78 104,54 146,78 104,102"/>
+                    <polygon class="face mid"   fill="url(#penA-gM)" points="62,78 104,102 104,128 62,104"/>
+                    <polygon class="face dark"  fill="url(#penA-gD)" points="146,78 104,102 104,128 146,104"/>
+
+                    <!-- Right segment -->
+                    <polygon class="face light" fill="url(#penA-gL)" points="146,78 176,130 146,152 116,102"/>
+                    <polygon class="face mid"   fill="url(#penA-gM)" points="116,102 146,152 146,176 116,128"/>
+                    <polygon class="face dark"  fill="url(#penA-gD)" points="176,130 146,152 146,176 176,154"/>
+
+                    <!-- Left segment (drawn last so it “covers” top at one end) -->
+                    <polygon class="face light" fill="url(#penA-gL)" points="62,78 92,128 62,152 32,130"/>
+                    <polygon class="face mid"   fill="url(#penA-gM)" points="32,130 62,152 62,176 32,154"/>
+                    <polygon class="face dark"  fill="url(#penA-gD)" points="92inho:22 0 0 0">
+  <title>OG Preview</title>
+  <desc>PvP (@eoaiv) — Free Team + Impossible Gallery</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06080d"/>
+      <stop offset="0.6" stop-color="#070c14"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="80" y1="100" x2="1120" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1ef0ff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#9bff3c" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="26" fill="none" stroke="url(#neon)" stroke-width="4" opacity="0.9"/>
+  <g opacity="0.85">
+    <text x="90" y="190" fill="#e9eef8" font-family="Orbitron, system-ui, sans-serif" font-size="64" font-weight="700">PvP</text>
+    <text x="90" y="250" fill="#aab6cc" font-family="Inter, system-ui, sans-serif" font-size="28">@eoaiv • Free Team</text>
+    <text x="90" y="332" fill="#e9eef8" font-family="Inter, system-ui, sans-serif" font-size="28">Impossible Gallery • cyber maximalism • mono objects</text>
+  </g>
+
+  <!-- simple impossible triangle icon -->
+  <g transform="translate(820,170)">
+    <path d="M120 0 L240 210 L0 210 Z" fill="none" stroke="#e9eef8" stroke-width="18" stroke-linejoin="round" opacity="0.92"/>
+    <path d="M120 0 L240 210" stroke="#1ef0ff" stroke-width="4" opacity="0.75"/>
+    <path d="M240 210 L0 210" stroke="#9bff3c" stroke-width="4" opacity="0.65"/>
+    <path d="M0 210 L120 0" stroke="#ff2bd6" stroke-width="4" opacity="0.55"/>
+  </g>
+</svg>
